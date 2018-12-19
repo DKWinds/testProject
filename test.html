@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <div class="div1"></div>
+    <div class="container">
+        <div class="left">
+            多列等高布局左
+            <br/>多列等高布局左
+        </div>
+        <div class="right">多列等高布局右</div>
+    </div>
+
+    <div>
+        <ul id="ul">
+            <li>
+                这是1
+            </li>
+            <li>
+                这是2
+            </li>
+            <li>
+                这是3
+            </li>
+        </ul>
+    </div>
+</body>
+<style type="text/css">
+.div1 {
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid cyan;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+
+.container {
+    display: flex;
+}
+
+.left,
+.right {
+    flex: 1;
+}
+
+.left {
+    background: pink;
+}
+
+.right {
+    background: green;
+}
+</style>
+<script type="text/javascript">
+
+    var ulNode = document.getElementById("ul");
+    ulNode.addEventListener('click', function (e) {
+        if (e.target && e.target.nodeName.toUpperCase() == "LI") {
+            alert(e.target.innerHTML);
+        }
+    }, false);
+    // var myul = document.getElementsByTagName("ul")[0];
+    // var list = myul.getElementsByTagName("li");
+ 
+    // function foo(){
+    //     for(var i = 0, len = list.length; i < len; i++){
+    //         list[i].onclick = function(){
+    //             alert(i + "----" + this.innerHTML);
+    //         }
+    //     }
+    // }
+    // foo();
+</script>
+
+</html>
