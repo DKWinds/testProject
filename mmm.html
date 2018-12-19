@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<!--[if !IE]>
+	<div>
+        这段文字只在非IE浏览器显示
+        </div>
+<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <style>
+    div {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        animation: firstdiv 2s ease 1s infinite normal;
+    }
+
+    @keyframes firstdiv {
+        0% {
+            top: 0;
+            left: 0;
+            background-color: greenyellow;
+        }
+
+        25% {
+            top: 110px;
+            /*left: 100px;*/
+            background-color: green;
+        }
+
+        50% {
+            top: 200px;
+            /*left: 100px;*/
+            background-color: yellow;
+        }
+
+        75% {
+            top: 100px;
+            left: 0;
+            background-color: gold;
+        }
+
+        100% {
+            top: 0;
+            left: 0;
+            background-color: greenyellow;
+        }
+
+    }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
